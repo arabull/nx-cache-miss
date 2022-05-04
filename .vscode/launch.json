@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run First",
+      "program": "${workspaceFolder}/node_modules/.bin/nx",
+      "args": ["run", "one:build"],
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "outputCapture": "std"
+    },
+    {
+      "name": "Run Second",
+      "program": "${workspaceFolder}/node_modules/.bin/nx",
+      "args": ["run", "two:deploy", "--someArgs=true"],
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node",
+      "outputCapture": "std"
+    }
+  ]
+}
