@@ -1,0 +1,22 @@
+{
+  "root": "one",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["dist/one"],
+      "options": {
+        "commands": [
+          {
+            "command": "echo one:build",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "mkdir -p ./dist && touch ./dist/one",
+            "forwardAllArgs": false
+          }
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

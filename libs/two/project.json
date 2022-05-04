@@ -1,0 +1,18 @@
+{
+  "root": "two",
+  "implicitDependencies": ["one"],
+  "targets": {
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "echo two:deploy",
+            "forwardAllArgs": true
+          }
+        ],
+        "parallel": false
+      }
+    }
+  }
+}
